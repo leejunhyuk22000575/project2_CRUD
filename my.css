@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    padding: 8px 12px;
+}
+
+.toptitle{
+    font-size:40px;
+    color: white;
+    padding-left: 20px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    padding: 8px 12px;
+}
+
+.snslink{
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.snslink  i{
+    padding: 8px 12px;
+}
+
+.board{
+    width:1000px;
+    margin: 100px auto;
+}
+.board_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+.board_title .h1{
+    font-size: 60px;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid grey;
+}
+
+.board_list > div{
+    border-bottom: 1px solid rgb(210, 210, 214);
+}
+
+.board_list > div.classification{
+    border-color: 1px solid grey;
+}
+.board_list > div:last-child{
+    border-bottom: 1px solid grey;
+}
+.board_list > div > div{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+}
+.board_list > div.classification > div{
+    font-weight: 700;
+    font-size: 20px;
+}
+.board_list .num{
+    width: 10%;
+}
+.board_list .workout{
+    width: 30%;
+    text-align: left;
+}
+.board_list .workout a{
+    color: black;
+}
+.board_list .classification .workout{
+    text-align: center;
+}
+.board_list .mainexercise{
+    width: 30%;
+}
+.board_list .volume{
+    width: 10%;
+}
+.board_list .date{
+    width: 10%;
+}
+
+.board_page{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0;
+}
+.board_page a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.board_page a.button, a.num{
+    font-size: 1.2rem;
+}
+.board_button{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.board_button a {
+    display: inline-block;
+    min-width: 40px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .top{
+        flex-direction: column;
+    }
+}
+
