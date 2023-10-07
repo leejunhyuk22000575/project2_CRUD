@@ -6,20 +6,6 @@
   <link rel="stylesheet" href="my.css">
   <title>Health Report</title>
   <script src="https://kit.fontawesome.com/cca57ec71d.js" crossorigin="anonymous"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const workout = document.getElementById('workout');
-    const num = document.getElementById('num');
-    const mainexercise = document.getElementById('mainexercise');
-    const volumeEleme = document.getElementById('volume');
-    const date = document.getElementById('date');
-
-    workout.textContent = urlParams.get('workout');
-    num.textContent = urlParams.get('num');
-    mainexercise.textContent = urlParams.get('mainexercise');
-    volume.textContent = urlParams.get('volume');
-    date.textContent = urlParams.get('date');
-  </script>
 </head>
 <body>
     <div class="top">
@@ -74,5 +60,19 @@
         </div>
       </div>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const workout = document.getElementById('workout');
+        const num = document.getElementById('num');
+        const mainexercise = document.getElementById('mainexercise');
+        const volumeEleme = document.getElementById('volume');
+        const date = document.getElementById('date');
+    
+        workout.textContent = urlParams.get('workout');
+        num.textContent = urlParams.get('num');
+        mainexercise.textContent = urlParams.get('mainexercise');
+        volume.textContent = urlParams.get('volume');
+        date.textContent = urlParams.get('date');
+      </script>
 </body>
 </html>
