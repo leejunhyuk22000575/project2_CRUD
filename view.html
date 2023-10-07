@@ -6,15 +6,6 @@
   <link rel="stylesheet" href="my.css">
   <title>Health Report</title>
   <script src="https://kit.fontawesome.com/cca57ec71d.js" crossorigin="anonymous"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const num = urlParams.get('num');
-    const workoutTitle = document.getElementById('workoutTitle');
-    const numElement = document.getElementById('num');
-    const mainExerciseElement = document.getElementById('mainExercise');
-    const volumeElement = document.getElementById('volume');
-    const dateElement = document.getElementById('date');
-  </script>
 </head>
 <body>
     <div class="top">
@@ -45,13 +36,13 @@
       </div>
       <div class="board_view_all">
         <div class="board_view">
-          <div class="title">
+          <div class="title" id="workout">
             
           </div>
           <div class="content">
             <dl>
                 <dt>번호</dt>
-                <dd id="num">1</dd>
+                <dd id="num"></dd>
             </dl>
             <dl>
                 <dt>메인 운동</dt>
@@ -69,5 +60,21 @@
         </div>
       </div>
     </div>
+    <script>
+        // URL에서 매개변수를 직접 읽어와서 해당 정보를 표시합니다.
+        const urlParams = new URLSearchParams(window.location.search);
+        const workoutTitle = document.getElementById('workout');
+        const numElement = document.getElementById('num');
+        const mainExerciseElement = document.getElementById('mainexercise');
+        const volumeElement = document.getElementById('volume');
+        const dateElement = document.getElementById('date');
+    
+        // URL에서 매개변수 값을 읽어서 해당 요소에 채워 넣습니다.
+        workoutTitle.textContent = urlParams.get('workout') || '';
+        numElement.textContent = urlParams.get('num') || '';
+        mainExerciseElement.textContent = urlParams.get('mainexercise') || '';
+        volumeElement.textContent = urlParams.get('volume') || '';
+        dateElement.textContent = urlParams.get('date') || '';
+      </script>
 </body>
 </html>
