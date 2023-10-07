@@ -129,7 +129,30 @@ a{
     border-radius: 2px;
     margin-left: 10px;
 }
-
+.board_view{
+    width: 100%;
+    border-top: 2px solid grey;
+}
+.board_view .title{
+    padding: 18px 14px;
+    border-bottom: 1.5px solid grey;
+    font-size: 40px;
+}
+.board_view .content{
+    padding: 13px;
+    border-bottom: 1.5px solid grey;
+}
+.board_view .content dl dt, .board_view .content dl dd{
+    display: inline-block;
+}
+.board_view .content dl dt{
+    font-weight: bold;
+}
+.board_view .content dl dd{
+    font-weight: lighter;
+    color : grey;
+    margin-left: 10px;
+}
 @media screen and (max-width: 768px){
     .top{
         flex-direction: column;
