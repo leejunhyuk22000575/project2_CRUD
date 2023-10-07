@@ -6,6 +6,15 @@
   <link rel="stylesheet" href="my.css">
   <title>Health Report</title>
   <script src="https://kit.fontawesome.com/cca57ec71d.js" crossorigin="anonymous"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const num = urlParams.get('num');
+    const workoutTitle = document.getElementById('workoutTitle');
+    const numElement = document.getElementById('num');
+    const mainExerciseElement = document.getElementById('mainExercise');
+    const volumeElement = document.getElementById('volume');
+    const dateElement = document.getElementById('date');
+  </script>
 </head>
 <body>
     <div class="top">
@@ -37,24 +46,24 @@
       <div class="board_view_all">
         <div class="board_view">
           <div class="title">
-            하체
+            
           </div>
           <div class="content">
             <dl>
                 <dt>번호</dt>
-                <dd>1</dd>
+                <dd id="num">1</dd>
             </dl>
             <dl>
                 <dt>메인 운동</dt>
-                <dd>스쿼트</dd>
+                <dd id="mainexercise"></dd>
             </dl>
             <dl>
                 <dt>볼륨</dt>
-                <dd>9000kg</dd>
+                <dd id="volume"></dd>
             </dl>
             <dl>
-                <dt>운동한 날짜</dt>
-                <dd>2023.4.29</dd>
+                <dt>운동날짜</dt>
+                <dd id="date"></dd>
             </dl>
           </div>
         </div>
