@@ -29,7 +29,7 @@
       <div class="board_title">
           <h1>Report List</h1>
           <div class="board_button">
-            <a href="index.html" class="on">List</a>
+            <a href="index.html" class="on">delete</a>
             <a href="edit.html">edit</a>
   
           </div>
@@ -62,17 +62,17 @@
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const workoutTitle = document.getElementById('workout');
-        const numElement = document.getElementById('num');
-        const mainExerciseElement = document.getElementById('mainexercise');
-        const volumeElement = document.getElementById('volume');
-        const dateElement = document.getElementById('date');
+        const workouts = document.getElementById('workout');
+        const nums = document.getElementById('num');
+        const mainexercises = document.getElementById('mainexercise');
+        const volumes = document.getElementById('volume');
+        const dates = document.getElementById('date');
     
-        workoutTitle.textContent = urlParams.get('workout');
-        numElement.textContent = urlParams.get('num');
-        mainExerciseElement.textContent = urlParams.get('mainexercise');
-        volumeElement.textContent = urlParams.get('volume');
-        dateElement.textContent = urlParams.get('date');
+        workouts.textContent = urlParams.get('workout');
+        nums.textContent = urlParams.get('num');
+        mainexercises.textContent = urlParams.get('mainexercise');
+        volumes.textContent = urlParams.get('volume');
+        dates.textContent = urlParams.get('date');
       </script>
 </body>
 </html>
