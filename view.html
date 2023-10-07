@@ -61,20 +61,17 @@
       </div>
     </div>
     <script>
-        // URL에서 매개변수를 직접 읽어와서 해당 정보를 표시합니다.
-        const urlParams = new URLSearchParams(window.location.search);
         const workoutTitle = document.getElementById('workout');
         const numElement = document.getElementById('num');
         const mainExerciseElement = document.getElementById('mainexercise');
         const volumeElement = document.getElementById('volume');
         const dateElement = document.getElementById('date');
     
-        // URL에서 매개변수 값을 읽어서 해당 요소에 채워 넣습니다.
-        workoutTitle.textContent = urlParams.get('workout') || '';
-        numElement.textContent = urlParams.get('num') || '';
-        mainExerciseElement.textContent = urlParams.get('mainexercise') || '';
-        volumeElement.textContent = urlParams.get('volume') || '';
-        dateElement.textContent = urlParams.get('date') || '';
+        workoutTitle.textContent = index.html.get('workout') || '';
+        numElement.textContent = index.html.get('num') || '';
+        mainExerciseElement.textContent = index.html.get('mainexercise') || '';
+        volumeElement.textContent = index.html.get('volume') || '';
+        dateElement.textContent = index.html.get('date') || '';
       </script>
 </body>
 </html>
