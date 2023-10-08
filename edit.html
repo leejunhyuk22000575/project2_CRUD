@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my.css">
+  <title>Health Report</title>
+  <script src="https://kit.fontawesome.com/cca57ec71d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="top">
+    <div class="toptitle">
+      <i class="fa-solid fa-dumbbell"></i>
+      <a href="index.html">Health Report</a>
+    </div>
+    <ul class="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Report</a></li>
+      <li><a href="">Training</a></li>
+      <li><a href="">Help</a></li>
+    </ul>
+    <ul class="snslink">
+      <li><i class="fa-brands fa-square-facebook"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+    </ul>
+  </div>
+  
+  <div class="board">
+    <div class="board_title">
+      <h1>Report List</h1>
+      <div class="board_button">
+        <button onclick="edit()">Edit</button>
+        <a href="index.html" onclick="cancel()">cancel</a>
+      </div>
+    </div>
+    <div class="board_add_all">
+      <div class="board_add">
+        <div class="workout">
+          <form name="form1" method="post">
+            제목(운동한 신체 부위) : <input type="text" id="workout" name="workout">
+          </form>
+        </div>
+        <div class="content">
+          <form name="form2" method="post">
+            메인 운동 : <input type="text" id="mainexercise" name="mainexercise"><br>
+            볼륨(무게) : <input type="text" id="volume" name="volume"><br>
+            운동날짜 : <input type="text" id="date" name="date"><br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const workout = urlParams.get('workout');
+    const mainexercise = urlParams.get('mainexercise');
+    const volume = urlParams.get('volume');
+    const date = urlParams.get('date');
+
+    document.getElementById('workout').value = workout;
+    document.getElementById('mainexercise').value = mainexercise;
+    document.getElementById('volume').value = volume;
+    document.getElementById('date').value = date;
+
+    function edit() {
+      var workout = document.form1.workout.value;
+      var mainexercise = document.form2.mainexercise.value;
+      var volume = document.form2.volume.value;
+      var date = document.form2.date.value;
+      
+      // 수정 로직 추가
+
+      var result = confirm("게시물을 수정할까요?");
+      if(result) {
+        alert("수정 완료");
+        window.location.href = 'index.html';
+      } else {
+        alert("수정 취소");
+      }
+    }
+
+    function cancel() {
+      alert("취소되었습니다");
+    }
+</script>
+
+</body>
+</html>

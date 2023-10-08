@@ -29,9 +29,8 @@
       <div class="board_title">
           <h1>Report List</h1>
           <div class="board_button">
-            <a href="index.html" class="on">delete</a>
-            <a href="edit.html">edit</a>
-  
+            <a href="index.html" onclick="delConfirm()">delete</a>
+            <a href="#" onclick="editMove()">edit</a>
           </div>
       </div>
       <div class="board_view_all">
@@ -62,17 +61,25 @@
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const workouts = document.getElementById('workout');
-        const nums = document.getElementById('num');
-        const mainexercises = document.getElementById('mainexercise');
-        const volumes = document.getElementById('volume');
-        const dates = document.getElementById('date');
+        const workout = urlParams.get('workout');
+        const mainexercise = urlParams.get('mainexercise');
+        const volume = urlParams.get('volume');
+        const date = urlParams.get('date');
     
-        workouts.textContent = urlParams.get('workout');
-        nums.textContent = urlParams.get('num');
-        mainexercises.textContent = urlParams.get('mainexercise');
-        volumes.textContent = urlParams.get('volume');
-        dates.textContent = urlParams.get('date');
-      </script>
+        document.getElementById('workout').textContent = workout;
+        document.getElementById('mainexercise').textContent = mainexercise;
+        document.getElementById('volume').textContent = volume;
+        document.getElementById('date').textContent = date;
+
+        function delConfirm(){
+            var result = confirm("게시물을 삭제할까요?");
+            if(result) alert("삭제 완료");
+            else alert("삭제 취소");
+        }
+
+        function editMove() {
+            window.location.href = `edit.html?workout=${workout}&mainexercise=${mainexercise}&volume=${volume}&date=${date}`;
+        }
+    </script>
 </body>
 </html>

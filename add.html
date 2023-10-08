@@ -6,6 +6,40 @@
   <link rel="stylesheet" href="my.css">
   <title>Health Report</title>
   <script src="https://kit.fontawesome.com/cca57ec71d.js" crossorigin="anonymous"></script>
+  <script>
+    function add() {
+        var workout = document.form1.workout.value;
+    var mainexercise = document.form2.mainexercise.value;
+    var volume = document.form2.volume.value;
+    var date = document.form2.date.value;
+    if (workout == '') {
+        alert("제목(운동한 신체 부위)을 입력하세요");
+        document.form1.workout.focus();
+        return;
+    }
+    if (mainexercise == '') {
+        alert("메인 운동을 입력하세요");
+        document.form2.mainexercise.focus();
+        return;
+    }
+    if (volume == '') {
+        alert("볼륨(무게)을 입력하세요");
+        document.form2.volume.focus();
+        return;
+    }
+    if (date == '') {
+        alert("운동 날짜를 입력하세요");
+        document.form2.date.focus();
+        return;
+    }
+    alert("게시물이 추가됩니다");
+    window.location.href = 'index.html';
+      }
+
+      function cancel() {
+        alert("취소되었습니다");
+      }
+  </script>
 </head>
 <body>
     <div class="top">
@@ -29,14 +63,25 @@
       <div class="board_title">
           <h1>Report List</h1>
           <div class="board_button">
-            <a href="#" class="on">add</a>
-            <a href="index.html">cancel</a>
+            <button onclick="add()">Add</button>
+            <a href="index.html" onclick="cancel()">cancel</a>
   
           </div>
       </div>
-      <div class="board_write_all">
-        <div class="board_write">
-          
+      <div class="board_add_all">
+        <div class="board_add">
+          <div class="workout">
+            <form name="form1" method="post">
+            제목(운동한 신체 부위) : <input type="text" id="workout" name="workout">
+            </form>
+          </div>
+          <div class="content">
+            <form name="form2" method="post">
+            메인 운동 : <input type="text" id="mainexercise" name="mainexercise"><br>
+            볼륨(무게) : <input type="text" id="volume" name="volume"><br>
+            운동날짜 : <input type="text" id="date" name="date"><br>
+            </form>
+          </div>
         </div>
       </div>
     </div>

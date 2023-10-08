@@ -119,10 +119,22 @@ a{
 .board_button{
     margin-top: 30px;
     text-align: center;
-}
-
-.board_button a {
     display: inline-block;
+}
+button {
+    min-width: 60px;
+    height: 33px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+.board_button a {
     min-width: 40px;
     padding: 5px;
     border: 1px solid black;
@@ -153,6 +165,24 @@ a{
     color : grey;
     margin-left: 10px;
 }
+
+.board_add .workout{
+    border-top: 2px solid black;
+    padding: 15px 15px;
+}
+.board_add .content{
+    padding: 15px 15px;
+}
+.board_add .content{
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+
+.board_add .workout{
+    font-weight: bolder;
+    font-size: larger;
+}
+
 @media screen and (max-width: 768px){
     .top{
         flex-direction: column;
