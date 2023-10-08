@@ -183,12 +183,24 @@ button {
     font-size: larger;
 }
 
+
+
+
 @media screen and (max-width: 768px){
     .top{
         flex-direction: column;
     }
 }
-.board{
-    width: 100%;
+@media screen and (max-width: 799px){
+    .board_list > div.classification > div{
+        font-size: 17px;
+    }
+    .board_list > div > div{
+        font-size: 12px;
+    }
 }
-
+@media screen and (max-width: 1000px){
+    .board{
+        width: 100%;
+    }
+}
