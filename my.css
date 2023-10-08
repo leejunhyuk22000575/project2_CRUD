@@ -16,7 +16,7 @@ a{
 }
 
 .toptitle{
-    font-size:40px;
+    font-size:30px;
     color: white;
     padding-left: 20px;
 }
@@ -187,5 +187,8 @@ button {
     .top{
         flex-direction: column;
     }
+}
+.board{
+    width: 100%;
 }
 

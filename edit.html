@@ -69,8 +69,26 @@
       var volume = document.form2.volume.value;
       var date = document.form2.date.value;
       
-      // 수정 로직 추가
-
+      if (workout == '') {
+        alert("제목(운동한 신체 부위)을 입력하세요");
+        document.form1.workout.focus();
+        return;
+    }
+    if (mainexercise == '') {
+        alert("메인 운동을 입력하세요");
+        document.form2.mainexercise.focus();
+        return;
+    }
+    if (volume == '') {
+        alert("볼륨(무게)을 입력하세요");
+        document.form2.volume.focus();
+        return;
+    }
+    if (date == '') {
+        alert("운동 날짜를 입력하세요");
+        document.form2.date.focus();
+        return;
+    }
       var result = confirm("게시물을 수정할까요?");
       if(result) {
         alert("수정 완료");
