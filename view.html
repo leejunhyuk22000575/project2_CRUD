@@ -61,11 +61,13 @@
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
+        const num = urlParams.get('num');
         const workout = urlParams.get('workout');
         const mainexercise = urlParams.get('mainexercise');
         const volume = urlParams.get('volume');
         const date = urlParams.get('date');
-    
+
+        document.getElementById('num').textContent = num;   
         document.getElementById('workout').textContent = workout;
         document.getElementById('mainexercise').textContent = mainexercise;
         document.getElementById('volume').textContent = volume;
