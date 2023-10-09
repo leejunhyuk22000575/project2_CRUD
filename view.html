@@ -29,7 +29,7 @@
       <div class="board_title">
           <h1>Report List</h1>
           <div class="board_button">
-            <a href="index.html" onclick="delConfirm()">delete</a>
+            <a href="#" onclick="delConfirm()">delete</a>
             <a href="#" onclick="editMove()">edit</a>
           </div>
       </div>
@@ -75,7 +75,10 @@
 
         function delConfirm(){
             var result = confirm("게시물을 삭제할까요?");
-            if(result) alert("삭제 완료");
+            if(result) {
+                alert("삭제 완료");
+                window.location.href = 'index.html';
+            }
             else alert("삭제 취소");
         }
 
