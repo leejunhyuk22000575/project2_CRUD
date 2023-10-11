@@ -30,49 +30,38 @@
           <h1>Report List</h1>
           <div class="board_button">
             <a href="#" onclick="delConfirm()">delete</a>
-            <a href="#" onclick="editMove()">edit</a>
+            <a href="edit.html">edit</a>
+            <a href="index.html">뒤로 가기</a>
           </div>
       </div>
       <div class="board_view_all">
         <div class="board_view">
           <div class="title" id="workout">
-            
+            어깨
           </div>
           <div class="content">
             <dl>
                 <dt>번호</dt>
-                <dd id="num"></dd>
+                <dd>어꺠</dd>
             </dl>
             <dl>
                 <dt>메인 운동</dt>
-                <dd id="mainexercise"></dd>
+                <dd>프레스</dd>
             </dl>
             <dl>
                 <dt>볼륨</dt>
-                <dd id="volume"></dd>
+                <dd>1000kg</dd>
             </dl>
             <dl>
                 <dt>운동날짜</dt>
-                <dd id="date"></dd>
+                <dd>2023.5.4</dd>
             </dl>
           </div>
         </div>
       </div>
     </div>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const num = urlParams.get('num');
-        const workout = urlParams.get('workout');
-        const mainexercise = urlParams.get('mainexercise');
-        const volume = urlParams.get('volume');
-        const date = urlParams.get('date');
-
-        document.getElementById('num').textContent = num;   
-        document.getElementById('workout').textContent = workout;
-        document.getElementById('mainexercise').textContent = mainexercise;
-        document.getElementById('volume').textContent = volume;
-        document.getElementById('date').textContent = date;
-
+       
         function delConfirm(){
             var result = confirm("게시물을 삭제할까요?");
             if(result) {
@@ -82,9 +71,7 @@
             else alert("삭제 취소");
         }
 
-        function editMove() {
-            window.location.href = `edit.html?workout=${workout}&mainexercise=${mainexercise}&volume=${volume}&date=${date}`;
-        }
+        
     </script>
 </body>
 </html>

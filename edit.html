@@ -31,20 +31,21 @@
       <div class="board_button">
         <button onclick="edit()">Edit</button>
         <a href="index.html" onclick="cancel()">cancel</a>
+        <a href="view.html">뒤로 가기</a>
       </div>
     </div>
     <div class="board_add_all">
       <div class="board_add">
         <div class="workout">
           <form name="form1" method="post">
-            제목(운동한 신체 부위) : <input type="text" id="workout" name="workout">
+            제목(운동한 신체 부위) : <input type="text" id="workout" name="workout" value="어깨">
           </form>
         </div>
         <div class="content">
           <form name="form2" method="post">
-            메인 운동 : <input type="text" id="mainexercise" name="mainexercise"><br>
-            볼륨(무게) : <input type="text" id="volume" name="volume"><br>
-            운동날짜 : <input type="text" id="date" name="date"><br>
+            메인 운동 : <input type="text" id="mainexercise" name="mainexercise" value="밀리터리프레스"><br>
+            볼륨(무게) : <input type="text" id="volume" name="volume" value="5000kg"><br>
+            운동날짜 : <input type="text" id="date" name="date" value="2023.5.4"><br>
           </form>
         </div>
       </div>
@@ -52,17 +53,7 @@
   </div>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const workout = urlParams.get('workout');
-    const mainexercise = urlParams.get('mainexercise');
-    const volume = urlParams.get('volume');
-    const date = urlParams.get('date');
-
-    document.getElementById('workout').value = workout;
-    document.getElementById('mainexercise').value = mainexercise;
-    document.getElementById('volume').value = volume;
-    document.getElementById('date').value = date;
-
+    
     function edit() {
       var workout = document.form1.workout.value;
       var mainexercise = document.form2.mainexercise.value;
